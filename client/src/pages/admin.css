@@ -1,0 +1,83 @@
+/* The pages at /admin, the home welcome page and the "not found" page. Every class starts with "ad" so it never mixes with the site's styles. */
+.ad{position:fixed;inset:0;overflow:auto;background:#faf8f6;color:#2a2622;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px 16px 48px;scroll-snap-align:none}
+.ad *{box-sizing:border-box}
+.ad h1{margin:0 0 4px;font-size:26px;line-height:1.2}
+.ad h2{margin:0 0 6px;font-size:18px;line-height:1.3}
+.ad-wrap{max-width:860px;margin:0 auto}
+.ad-center{text-align:center;padding-top:10vh;max-width:560px}
+.ad-big{font-size:56px;margin:0 0 8px;line-height:1}
+.ad-card{background:#fff;border:1px solid #e8e2db;border-radius:12px;padding:20px;margin:0 0 20px}
+.ad-login{max-width:380px;margin:8vh auto 0}
+.ad label{display:block;margin:12px 0 4px;font-size:14px;font-weight:600}
+.ad input,.ad select,.ad textarea{width:100%;padding:10px 12px;border:1px solid #d9d1c8;border-radius:8px;font:inherit;background:#fff;color:inherit}
+.ad input:focus-visible,.ad select:focus-visible,.ad textarea:focus-visible,.ad button:focus-visible,.ad a:focus-visible{outline:2px solid #2a2622;outline-offset:2px}
+.ad textarea{min-height:120px;resize:vertical}
+.ad input:disabled,.ad select:disabled{background:#f3efea;color:#7a7167}
+.ad-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ad button,.ad-btn{display:inline-block;min-height:40px;padding:9px 16px;border:1px solid #2a2622;border-radius:8px;background:#2a2622;color:#fff;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;line-height:1.3;text-align:center}
+.ad button:disabled{opacity:.5;cursor:default}
+.ad .ad-ghost{background:transparent;color:#2a2622;border:1px solid #d9d1c8}
+.ad .ad-danger{background:#fff;color:#b3261e;border:1px solid #e3b5b1}
+.ad-link{margin-right:8px;color:#2a2622}
+.ad-slim{padding:12px 20px}
+
+/* top bar */
+.ad-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid #e8e2db}
+.ad-bar nav{display:flex;gap:6px}
+.ad-bar nav a{padding:8px 14px;border-radius:8px;color:#2a2622;text-decoration:none;font-weight:600}
+.ad-bar nav a.active{background:#2a2622;color:#fff}
+.ad-who{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px}
+.ad-back{margin:0 0 14px;font-size:14px}
+.ad-back a{color:#2a2622}
+
+/* log in / sign up */
+.ad-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:14px 0 4px}
+.ad .ad-tabs button{background:#f3efea;color:#2a2622;border:1px solid #e8e2db}
+.ad .ad-tabs button.on{background:#2a2622;color:#fff;border-color:#2a2622}
+
+/* the site link */
+.ad-linkbox{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.ad-linkbox input{flex:1 1 220px;width:auto;font:14px ui-monospace,Menlo,Consolas,monospace}
+.ad-slug{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin-top:6px}
+.ad-slug label{flex:1 1 260px;margin:0}
+.ad-prefix{display:flex;align-items:center;gap:6px;margin-top:4px;font-weight:400}
+.ad-prefix span{color:#7a7167;font:14px ui-monospace,Menlo,Consolas,monospace}
+
+/* pictures */
+.ad-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin-top:14px}
+.ad-photo{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:#eee;display:grid;place-items:center}
+.ad-photo img{width:100%;height:100%;object-fit:cover}
+.ad-ph{color:#9a9086}
+.ad .ad-photo button{position:absolute;top:6px;right:6px;min-height:0;padding:4px 8px;font-size:12px;background:rgb(0 0 0/.65);border-color:transparent}
+.ad-meter{height:8px;border-radius:99px;background:#eee7df;overflow:hidden;margin:6px 0}
+.ad-meter span{display:block;height:100%;background:#2a2622;border-radius:99px}
+
+/* messages */
+.ad-msg{margin:12px 0;font-size:14px;color:#2f6f3e}
+.ad-err{color:#b3261e}
+.ad-warn{color:#8a5a00;background:#fff4d6;border:1px solid #f0dca0;border-radius:8px;padding:10px 12px}
+.ad-hint{margin:2px 0 8px;color:#7a7167;font-size:13px}
+
+/* people */
+.ad-user-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.ad-user-head h2{margin-bottom:0}
+.ad-you{font-weight:400;color:#7a7167}
+.ad-stats{min-width:190px;font-size:14px}
+.ad-stats p{margin:0}
+.ad-stats .ad-hint{margin-top:6px}
+.ad-badges{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 0}
+.ad-badge{display:inline-block;padding:2px 9px;border-radius:99px;background:#eee7df;color:#4a423a;font-size:12px;font-weight:600}
+.ad-badge-super{background:#2a2622;color:#fff}
+.ad-badge-warn{background:#fff0c2;color:#7a5200}
+.ad-badge-off{background:#f6d9d6;color:#8c1f17}
+.ad-dim{background:#fbf9f7}
+.ad-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.ad-more{margin-top:14px;padding-top:6px;border-top:1px solid #eee7df}
+
+@media (max-width:640px){
+  .ad{padding:16px 12px 40px}
+  .ad-row{grid-template-columns:1fr}
+  .ad-card{padding:16px}
+  .ad-stats{min-width:0;width:100%}
+  .ad-actions>*{flex:1 1 140px}
+}
